@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
+
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .logo-fuente{
+    display: none;
+  }
+
+  }
+@media (max-width: 768px) {
+
+
+}
+@media (max-width: 576px) {
+  footer .padding{
+    padding-left: 0;
+    padding-right: -25px;
+  }
+  .navbar-brand img{
+    margin-bottom: 0.25em;
+    margin-left: 0.25em;
+    display: none;
+  }
+
+  .navbar-brand #logo-fuente{
+    display: none;
+  }
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/textura.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 5rem;
+}
+
+.navbar{
+  padding: .8rem;
+}
+
+.navbar-nav li{
+  padding-right: 20px;
+}
+
+nav-link{
+  font-size: 1.1em !important;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.carousel-caption{
+  position: absolute;
+  top:40%;
+}
+.carousel-caption h1{
+  font-size: 700%;
+  text-shadow: 1px 1px 1px #000;
+}
+
+
+/* ------------------------------------ */
+
+.logo-fuente{
+  margin-left: 0.5em;
+  font-size: 2em;
+}
+
+.precio {
+text-align: center;
+padding: 0 75px;
+}
+
+.btn btn-outline-dark{
+  margin: 35px;
+}
+footer{
+  background-color: #ccb8b1;
+}
+
+.conecta{
+  height: auto;
+  padding: 2rem;
+  background-color: #7b8799;
+}
+
+.social-nav{
+  height: auto;
+  padding: 2rem;
+  background-color: #fff;
+
+}
+
+.social a{
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.fa-twitter:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook-f:hover {
+    opacity: 0.7;
+}
+
+.fa-instagram:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook-f {
+  color: black;
+}
+
+.fa-twitter{
+  color: black;
+}
+
+.fa-instagram{
+  color: black;
+}
+
+.fa-youtube{
+  color: #bb0000;
+}
+
+.footer-box{
+  height: auto;
+  padding: 1rem;
+
+}
+
+.telefono p{
+  text-decoration: none;
+  color: black;
+}
+
+.carrito {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  left: 88%;
+}
+
+.IniciaSe {
+ position: fixed;
+ bottom: 0px;
+ right: 20px;
+ z-index: 1;
+ width: 150px;
+ height: 30px;
+ text-align: center;
+ background-color: #cbd1db;
+ color: white;
+ border-radius: 10px 10px 0px 0px;
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
