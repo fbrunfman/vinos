@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Producto;
+use App\Product;
 use Illuminate\Http\Request;
 
-class Producto extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,11 @@ class Producto extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::paginate(10); 
+
+        // return view('create', [
+        //     'products' => $products
+        // ]);
     }
 
     /**
@@ -24,7 +28,7 @@ class Producto extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -35,9 +39,21 @@ class Producto extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $this->validate($request, [
+            'bodega' => 'required',
+            'modelo' => 'required',
+            'fecha' => 'required'
+        ]);
+    
 
+        $product = Product::create([
+            'bodega' => $request->input('bodega'),
+            'modelo' => $request->input('modelo'),
+            'fecha' => $request->input('fecha')
+        ]);
+    
+        return 'todo bien';
+    }
     /**
      * Display the specified resource.
      *

@@ -48,7 +48,7 @@
 					<a href="#" class="nav-link">Envios</a>
 			</li>
 				<li class="nav-item">
-						<a href="vregistracion.php" class="nav-link">Unite</a>
+						<a href="register" class="nav-link">Unite</a>
 					</li>
 		</ul>
 	</div>
@@ -123,7 +123,7 @@
 	  </div>
 	  <div class="col-lg-3 col-md-4">
 			<div class="card" style="width: 13.5rem;">
-				<img class="card-img-top" src=asset('img/LA LINDA-2.jpg'); alt="Card image cap">
+				<img class="card-img-top" src="{{URL::asset('/img/LA LINDA-2.jpg')}}" "alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">La Linda Bonarda - Malbec</h5>
 					<p class="card-text">Un clásico de la familia Bosca - $230</p>
@@ -137,7 +137,7 @@
 
 	  <div class="col-lg-3 col-md-4">
 			<div class="card" style="width: 12rem;">
-				<img class="card-img-top" src="../assets/img/humberto canale-1.jpg" alt="Card image cap">
+				<img class="card-img-top" src="{{URL::asset('/img/humberto canale-1.jpg')}}"" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">Humberto Canale Estate - Malbec</h5>
 					<p class="card-text">Ideal para los clásicos asados - $320</p>
@@ -149,7 +149,7 @@
 	  </div>
 	  <div class="col-lg-3 col-md-4">
 			<div class="card" style="width: 13.3rem;">
-				<img class="card-img-top" src="img/luigi bosca-1.jpg" alt="Card image cap">
+				<img class="card-img-top" src="{{URL::asset('/img/luigi.jpg')}}" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">Luigi Bosca Gala 1 · Malbec · </h5>
 					<p class="card-text">Un vino que no necesita presentación - $680</p>
@@ -162,7 +162,7 @@
 	</div>
 	  <div class="col-lg-3 col-md-4">
 			<div class="card" style="width: 13.2rem;">
-				<img class="card-img-top" src="../assets/img/tomero-1.jpg" alt="Card image cap">
+				<img class="card-img-top" src="{{URL::asset('/img/tomero-1.jpg')}}" " alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">Tomero Malbec Bga Vistalba </h5>
 					<p class="card-text">Un vino sólido al mejor precio - $125</p>
@@ -174,7 +174,7 @@
 	</div>
 	  <div class="col-lg-3 col-md-4">
 			<div class="card" style="width: 12rem;">
-				<img class="card-img-top" src="img/stella bella-1.jpg" alt="Card image cap">
+				<img class="card-img-top" src="{{URL::asset('/img/stella bella-1.jpg')}}" "alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">Stella Bella - Cabernet Suavignon</h5>
 					<p class="card-text">Nuevo sabor que viene de lejos - $340</p>

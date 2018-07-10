@@ -14,7 +14,12 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/preguntas_frecuentes', function (){
+return view('preguntas');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('products', 'ProductController');
