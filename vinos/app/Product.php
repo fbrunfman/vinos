@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'bodega', 'modelo', 'fecha',
+        'bodega', 'modelo', 'fecha', 'imagen'
     ];
     public $timestamps = false;
     /**
@@ -19,3 +19,4 @@ class Product extends Model
         'password', 'remember_token',
     ];
 }
+ 

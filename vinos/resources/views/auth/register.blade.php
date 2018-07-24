@@ -119,6 +119,29 @@
                             </div>
                         </div>
                     </form>
+
+                    <script>
+                            document.formulario.onsubmit=function(evento){
+                              evento.preventDefault()
+                              var reMail= /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+                              var email= document.getElementById('email').value
+                              //var email = document.forms[0].elements.email.value
+                              //var email = document.formulario.email.value
+                              //var {email}=document.forms
+                              if(!reMail.test(email)){
+                                swal("error","Debe colocar un correo valido...","error")
+                                return
+                              }
+                              var clave = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/
+                              var pass=document.forms[0].elements.password.value
+                              if(!clave.test(pass)){
+                                swal("error","Debe colocar una contraseña valida, ocho caracteres...","error")
+                                return
+                              }
+                              
+                              document.formulario.submit() 
+                            }
+                          </script>
                 </div>
             </div>
         </div>

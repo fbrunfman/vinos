@@ -14,11 +14,12 @@ class ProductController extends Controller
      */
     public function index()
     {
+    
         $products = Product::paginate(10); 
-
-        // return view('create', [
-        //     'products' => $products
-        // ]);
+        return view('index', [
+            'products' => $products
+        ]);
+       
     }
 
     /**
@@ -39,28 +40,35 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+       
         $this->validate($request, [
             'bodega' => 'required',
             'modelo' => 'required',
-            'fecha' => 'required'
+            'fecha' => 'required',
+            'imagen'=> 'required'
         ]);
     
-
+        $folder = 'Products';
+        
+        $path = $request->imagen->storePublicly('public/images');
+        $path = str_replace('public','storage', $path);
+        
         $product = Product::create([
             'bodega' => $request->input('bodega'),
             'modelo' => $request->input('modelo'),
-            'fecha' => $request->input('fecha')
+            'fecha' => $request->input('fecha'),
+            'imagen'=> $path
         ]);
-    
+
         return 'todo bien';
     }
     /**
      * Display the specified resource.
      *
-     * @param  \App\Producto  $producto
+     * @param  \App\Product  $producto
      * @return \Illuminate\Http\Response
      */
-    public function show(Producto $producto)
+    public function show(Product $product)
     {
         //
     }
@@ -68,10 +76,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Producto  $producto
+     * @param  \App\Product  $producto
      * @return \Illuminate\Http\Response
      */
-    public function edit(Producto $producto)
+    public function edit(Product $product)
     {
         //
     }
@@ -80,10 +88,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Producto  $producto
+     * @param  \App\Product  $producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -91,11 +99,22 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Producto  $producto
+     * @param  \App\Product  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Producto $producto)
+    public function destroy(Product $product)
     {
         //
     }
+    public function upload(){
+        if(\Input::hasFile('file')){
+            echo "Uploaded";
+            $file = \Input::file('file');
+            $file->move('uploads');
+
+        }
+        
+        
+    }
+
 }
