@@ -60,7 +60,7 @@ class ProductController extends Controller
             'imagen'=> $path
         ]);
 
-        return view('products');
+        return view('indice');
     }
     /**
      * Display the specified resource.
@@ -111,7 +111,7 @@ class ProductController extends Controller
         
         $product->delete();
 
-        return view('/products');
+        return view('nuestrosvinos');
     }
     public function upload(){
         if(\Input::hasFile('file')){
