@@ -52,7 +52,7 @@
 					<a href="#" class="nav-link">Quienes somos</a>
 				</li>
 				<li class="nav-item">
-					<a href="preguntas_frecuentes.html" class="nav-link">Preguntas frecuentes</a>
+					<a href="/preguntas_frecuentes" class="nav-link">Preguntas frecuentes</a>
 			</li>
 			<li class="nav-item">
 					<a href="#" class="nav-link">Envios</a>

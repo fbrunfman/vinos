@@ -15,8 +15,17 @@
 </head>
 <body>
 	<!-- log in -->
-<div class="IniciaSe">
-<a href=sesion.html>Inicia sesion</a>
+	<div
+	<button type="button" href= 'login' class="btn btn-light">   @if (Route::has('login'))
+		<div class="top-right links">
+			@auth
+				<a href="{{ url('/home') }}">Deslogeate!</a>
+			@else
+				<a href="{{ route('login') }}">Login</a>
+				<a href="{{ route('register') }}">Registrate</a>
+			@endauth
+		</div>
+	@endif</button>
 </div>
 	<!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light  sticky/top">
@@ -24,29 +33,29 @@
 	<a class="navbar-brand logo" href="index.html">
 <img src="./img/logo-transparente.png" width="50" height="50" alt="Logo"><span id="logo-fuente">Vinos del Sur</span>
 </a>
-	<!-- <a class="navbar-logo" href="index.html"><img src="./img/logo-transparente.png" alt=""><p>Vinos del Sur</p></a> -->
+	<!-- <a class="navbar-logo" href="/"><img src="./img/logo-transparente.png" alt=""><p>Vinos del Sur</p></a> -->
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse nav-menu" id="navbarResponsive">
 		<ul class="navbar-nav ml-auto ">
 		<li class="nav-item">
-			<a href="index.html" class="nav-link">Inicio</a>
+			<a href="/" class="nav-link">Inicio</a>
 		</li>
 		<li class="nav-item">
-				<a href="#" class="nav-link">Nuestros vinos</a>
+				<a href="/nuestrosvinos" class="nav-link">Nuestros vinos</a>
 			</li>
 			<li class="nav-item">
 					<a href="#" class="nav-link">Quienes somos</a>
 				</li>
 				<li class="nav-item">
-					<a href="preguntas_frecuentes.html" class="nav-link">Preguntas frecuentes</a>
+					<a href="/preguntas_frecuentes" class="nav-link">Preguntas frecuentes</a>
 			</li>
 			<li class="nav-item">
 					<a href="#" class="nav-link">Envios</a>
 			</li>
 				<li class="nav-item">
-						<a href="registracion.html" class="nav-link">Unite</a>
+						<a href="/register" class="nav-link">Unite</a>
 					</li>
 		</ul>
 	</div>

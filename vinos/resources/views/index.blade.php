@@ -15,10 +15,18 @@
 	<link rel="icon" href="./img/logo-transparente.png">
 </head>
 <body>
-        <!-- log in -->
-        <div class="IniciaSe">
-        <a href=sesion.php>Inicia sesion</a>
-        </div>
+    <div
+	<button type="button" href= 'login' class="btn btn-light">   @if (Route::has('login'))
+		<div class="top-right links">
+			@auth
+				<a href="{{ url('/home') }}">Deslogeate!</a>
+			@else
+				<a href="{{ route('login') }}">Login</a>
+				<a href="{{ route('register') }}">Registrate</a>
+			@endauth
+		</div>
+	@endif</button>
+</div>
             <!-- Navigation -->
         <nav class="navbar navbar-expand-md navbar-light  sticky/top">
         <div class="container-fluid">
