@@ -30,26 +30,26 @@
             <!-- Navigation -->
         <nav class="navbar navbar-expand-md navbar-light  sticky/top">
         <div class="container-fluid">
-            <a class="navbar-brand logo" href="index.html">
+            <a class="navbar-brand logo" href="/">
         <span id="logo-fuente">Vinos del Sur</span>
         </a>
-            <!-- <a class="navbar-logo" href="index.html"><img src="{{asset('img/logo-transparente.png')}}"; alt=""><p>Vinos del Sur</p></a> -->
+            <!-- <a class="navbar-logo" href="/"><img src="{{asset('img/logo-transparente.png')}}"; alt=""><p>Vinos del Sur</p></a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav-menu" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto ">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="/" class="nav-link">Inicio</a>
                 </li>
                 <li class="nav-item">
-                        <a href="#" class="nav-link">Nuestros vinos</a>
+                        <a href="/nuestrosvinos" class="nav-link">Nuestros vinos</a>
                     </li>
                     <li class="nav-item">
                             <a href="#" class="nav-link">Quienes somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="preguntas_frecuentes.html" class="nav-link">Preguntas frecuentes</a>
+                            <a href="/preguntas_frecuentes" class="nav-link">Preguntas frecuentes</a>
                     </li>
                     <li class="nav-item">
                             <a href="#" class="nav-link">Envios</a>

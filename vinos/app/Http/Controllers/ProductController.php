@@ -111,7 +111,7 @@ class ProductController extends Controller
         
         $product->delete();
 
-        return view('nuestrosvinos');
+        return view('/indice');
     }
     public function upload(){
         if(\Input::hasFile('file')){
