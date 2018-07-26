@@ -17,8 +17,18 @@
 
 <body>
 	<!-- log in -->
-<div class="IniciaSe">
-<a href=sesion.php>Inicia sesion</a>
+
+	<div
+	<button type="button" href= 'login' class="btn btn-light">   @if (Route::has('login'))
+		<div class="top-right links">
+			@auth
+				<a href="{{ url('/home') }}">Deslogeate!</a>
+			@else
+				<a href="{{ route('login') }}">Login</a>
+				<a href="{{ route('register') }}">Registrate</a>
+			@endauth
+		</div>
+	@endif</button>
 </div>
 	<!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light  sticky/top">
@@ -36,7 +46,7 @@
 			<a href="/" class="nav-link">Inicio</a>
 		</li>
 		<li class="nav-item">
-				<a href="#" class="nav-link">Nuestros vinos</a>
+				<a href="/nuestrosvinos" class="nav-link">Nuestros vinos</a>
 			</li>
 			<li class="nav-item">
 					<a href="#" class="nav-link">Quienes somos</a>
@@ -48,7 +58,7 @@
 					<a href="#" class="nav-link">Envios</a>
 			</li>
 				<li class="nav-item">
-						<a href="register" class="nav-link">Unite</a>
+						<a href="register" class="nav-link">Unite </a>
 					</li>
 		</ul>
 	</div>

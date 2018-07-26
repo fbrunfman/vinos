@@ -60,7 +60,7 @@ class ProductController extends Controller
             'imagen'=> $path
         ]);
 
-        return 'todo bien';
+        return view('products');
     }
     /**
      * Display the specified resource.
@@ -70,7 +70,10 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        $products = Product::paginate(10); 
+        return view('nuestrosvinos', [
+            'products' => $products
+        ]);
     }
 
     /**
@@ -102,9 +105,13 @@ class ProductController extends Controller
      * @param  \App\Product  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        
+        $product->delete();
+
+        return view('/products');
     }
     public function upload(){
         if(\Input::hasFile('file')){

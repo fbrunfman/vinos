@@ -47,7 +47,7 @@
                             <a href="/" class="nav-link">Inicio</a>
                         </li>
                         <li class="nav-item">
-                                <a href="#" class="nav-link">Nuestros vinos</a>
+                                <a href="/nuestrosvinos" class="nav-link">Nuestros vinos</a>
                             </li>
                             <li class="nav-item">
                                     <a href="#" class="nav-link">Quienes somos</a>

@@ -62,7 +62,7 @@
    <form action="/products" method="post" enctype="multipart/form-data">
      {{ csrf_field() }}
      <div class="form-group">
-            <label for="bodega">Cod. Producto
+            <label for="bodega">Bodega
               <input type="text" name="bodega" value="">
             </label>
           </div>
@@ -72,7 +72,7 @@
        </label>
      </div>   
      <div class="form-group">
-        <label for="fecha">Nombre
+        <label for="fecha">Fecha
           <input type="text" name="fecha" value="">
         </label>
         </div>

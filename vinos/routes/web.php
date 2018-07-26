@@ -24,14 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('products', 'ProductController');
 Route::post('/products', 'ProductController@store');
+Route::get('/nuestrosvinos', 'ProductController@show');
 
-
-// Route::get('products', ['middleware' => ['auth', 'admin'], function() {
-//     return "this page requires that you be logged in and an Admin";
-//  }]);
-
-//  Route::get('/products',function(){
-//      return view ('products');
-//  })->middleware(Admin::class);
 
 Route::get('/products', 'ProductController@index')->middleware('admin');
+Route::get('{id}/delete', 'ProductController@destroy');

@@ -58,32 +58,31 @@
     <div>
         <a href="/products/create">Nuevo Producto</a>
     </div>
-    <table>
-        <thead>
-            <th>Codigo</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th></th>
-        </thead>
-        <tbody>
+    
+    <div class="container">
             @foreach ($products as $product)
-                <tr>
-                    <td> {{ $product->bodega }} </td>
-                    <td> {{ $product->modelo }} </td>
-                    <td> {{ $product->id }}</td>
-                    <td> <img width='200px' src="{{ asset($product->imagen) }}"  /></td>
-
-                    <td>
-                        <a href="/products/{{ $product->id }}/delete">Eliminar</a>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card" style="width: 12.5rem;">
+                      <img width='100' src="{{ asset($product->imagen) }}"  />
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $product->bodega }}</h5>
+                            <h5 class="card-title">{{ $product->modelo }}</h5>
+                            <h5 class="card-title"> Fecha: {{ $product->fecha }}</h5>
+                            <p class="card-text">Código: {{ $product->id }}</p>
+                            <a href="{{ $product->id }}/delete">Eliminar</a>
+                              
+                        </div>
+                    </div>
+                    @endforeach     
+              </div>
+              </div>
         {{ $products->links() }}
-    </div>
-
+         </div>
+        </div>
+   
+                        {{--  <a href="/products/{{ $product->id }}/delete">Eliminar</a>  --}}
+       
     <!--- Footer -->
 <footer class="container-fluid">
 		<!-- redes sociales -->
