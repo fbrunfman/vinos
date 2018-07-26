@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md navbar-light  sticky/top">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="index.html">
-        <img src="./img/logo-transparente.png" width="50" height="50" alt="Logo"><span id="logo-fuente">Vinos del Sur</span>
+        <span id="logo-fuente">Vinos del Sur</span>
         </a>
             <!-- <a class="navbar-logo" href="index.html"><img src="{{asset('img/logo-transparente.png')}}"; alt=""><p>Vinos del Sur</p></a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
